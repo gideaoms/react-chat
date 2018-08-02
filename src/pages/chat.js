@@ -1,5 +1,6 @@
 import React from 'react'
+import MessageInput from '../components/Container/MessageInput'
 
-const Chat = () => <h1>Chat</h1>
+const Chat = () => <MessageInput />
 
 export default Chat
