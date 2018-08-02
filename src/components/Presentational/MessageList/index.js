@@ -1,9 +1,10 @@
 import React from 'react'
+import Message from './Message'
 
 const MessageList = ({ messages }) => (
   <ul>
     {messages.map(({ id, message }) => (
-      <li key={id}>{message}</li>
+      <Message key={id} message={message} />
     ))}
   </ul>
 )

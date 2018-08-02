@@ -9,12 +9,15 @@ const INITIAL_STATE = {
 export default function chat (state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.ADD_MESSAGE:
-      console.log(state.messages.length)
       return {
         ...state,
         messages: [
           ...state.messages,
-          { id: state.messages.length, message: action.payload.message }
+          {
+            id: state.messages.length,
+            message: action.payload.message,
+            owner: Math.random() > 0.5
+          }
         ]
       }
     default:
