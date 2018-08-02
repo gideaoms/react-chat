@@ -1,7 +1,8 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "standard",
-    "standard-jsx"
-  ]
+  "extends": ["standard", "standard-jsx"],
+  "env": {
+    "browser": true,
+    "jest": true
+  }
 }
