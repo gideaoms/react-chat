@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import MessageInput from '../components/Container/MessageInput'
+import MessageList from '../components/Container/MessageList'
 
-const Chat = () => <MessageInput />
+const Chat = () => (
+  <Fragment>
+    <MessageList />
+    <MessageInput />
+  </Fragment>
+)
 
 export default Chat

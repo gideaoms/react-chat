@@ -13,6 +13,7 @@ class MessageInputContainer extends Component {
     e.preventDefault()
 
     this.props.addMessage(this.state.messageText)
+    this.setState({ messageText: '' })
   }
 
   handleChange = e => {
@@ -24,7 +25,7 @@ class MessageInputContainer extends Component {
       <MessageInput
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
-        messageText={this.props.messageText}
+        messageText={this.state.messageText}
       />
     )
   }
