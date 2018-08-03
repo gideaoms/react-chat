@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import MessageCount from '.'
 
-describe('MessageCount component', () => {
+describe('MessageCount Component - Presentational', () => {
   it('should render quantity of messages', () => {
     const wrapper = shallow(<MessageCount sent={2} received={5} />)
 

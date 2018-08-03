@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import MessageInput from '.'
 
-describe('MessageInput component', () => {
+describe('MessageInput Component - Presentational', () => {
   it('should be able to submit a message', () => {
     const handleSubmit = jest.fn()
     const wrapper = shallow(<MessageInput handleSubmit={handleSubmit} />)
