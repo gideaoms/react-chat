@@ -1,9 +1,25 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    './src/index.js',
+    './src/assets/index.js'
+  ],
   output: {
-    filename: 'bundle.js',
-    path: `${__dirname}/public`
+    filename: '[hash].js',
+    path: `${__dirname}/public`,
+    publicPath: '/'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'App',
+      template: './public/index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[hash].css'
+    })
+  ],
   module: {
     rules: [
       {
@@ -13,6 +29,14 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
+      },
+      {
+        test: /\.s?[ac]ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
