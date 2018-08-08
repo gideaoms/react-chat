@@ -8,14 +8,20 @@ describe('MessageCount Component - Presentational', () => {
 
     expect(
       wrapper
-        .find('span')
+        .children()
         .first()
+        .children()
+        .last()
+        .dive()
         .text()
     ).toEqual('2')
     expect(
       wrapper
-        .find('span')
+        .children()
         .last()
+        .children()
+        .last()
+        .dive()
         .text()
     ).toEqual('5')
   })

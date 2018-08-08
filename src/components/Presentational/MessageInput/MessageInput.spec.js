@@ -21,7 +21,8 @@ describe('MessageInput Component - Presentational', () => {
     const wrapper = shallow(<MessageInput handleChange={handleChange} />)
 
     wrapper
-      .find('input')
+      .find('form')
+      .children()
       .first()
       .simulate('change', message)
 
