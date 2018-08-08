@@ -24,6 +24,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
@@ -42,6 +43,7 @@ module.exports = {
   },
   devServer: {
     contentBase: `${__dirname}/public`,
-    port: 8080
+    port: 8080,
+    publicPath: '/'
   }
 }

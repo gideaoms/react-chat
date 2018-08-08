@@ -1,14 +1,17 @@
 import React from 'react'
-import { Container } from './styles'
+import { IoIosChatboxes } from 'react-icons/io'
+import { Container, Span, Count } from './styles'
 
 const MessageCount = ({ sent, received }) => (
   <Container>
-    <p>
-      Mensagens recebidas: <span>{sent}</span>
-    </p>
-    <p>
-      Mensagens enviadas: <span>{received}</span>
-    </p>
+    <Span>
+      <IoIosChatboxes size='2em' />
+      Mensagens recebidas: <Count>{sent}</Count>
+    </Span>
+    <Span>
+      <IoIosChatboxes size='2em' />
+      Mensagens enviadas: <Count>{received}</Count>
+    </Span>
   </Container>
 )
 

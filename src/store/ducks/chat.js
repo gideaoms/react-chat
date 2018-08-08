@@ -3,7 +3,10 @@ export const Types = {
 }
 
 const INITIAL_STATE = {
-  messages: []
+  messages: [
+    { id: 0, message: 'Message 1', owner: false },
+    { id: 1, message: 'Message 2', owner: true }
+  ]
 }
 
 export default function chat (state = INITIAL_STATE, action) {

@@ -1,9 +1,8 @@
 import { injectGlobal } from 'styled-components'
-import colors from './colors'
 
 injectGlobal`
   body {
-    background: ${colors.backgroundColor};
+    background: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
   }

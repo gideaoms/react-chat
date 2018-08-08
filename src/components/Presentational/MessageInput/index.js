@@ -1,17 +1,21 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { IoMdSend } from 'react-icons/io'
+import { Container, Input, Button } from './styles'
 
 const MessageInput = ({ handleSubmit, handleChange, messageText }) => (
-  <Fragment>
+  <Container>
     <form onSubmit={handleSubmit}>
-      <input
+      <Input
         type='text'
-        placeholder='Digite seu texto aqui...'
+        placeholder='Digite sua mensagem aqui...'
         value={messageText}
         onChange={handleChange}
       />
-      <button type='submit'>Enviar</button>
+      <Button type='submit'>
+        <IoMdSend size='2em' />
+      </Button>
     </form>
-  </Fragment>
+  </Container>
 )
 
 export default MessageInput

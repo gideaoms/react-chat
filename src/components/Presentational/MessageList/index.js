@@ -1,12 +1,13 @@
 import React from 'react'
 import Message from './Message'
+import { Container } from './styles'
 
 const MessageList = ({ messages }) => (
-  <ul>
-    {messages.map(({ id, message }) => (
-      <Message key={id} message={message} />
+  <Container>
+    {messages.map(({ id, message, owner }) => (
+      <Message key={id} message={message} owner={owner} />
     ))}
-  </ul>
+  </Container>
 )
 
 export default MessageList
