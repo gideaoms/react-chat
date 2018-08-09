@@ -48,7 +48,8 @@
     "sass-loader": "^7.1.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-livereload-plugin": "^2.1.1"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
@@ -60,12 +61,6 @@
     "reselect": "^3.0.1",
     "styled-components": "^3.4.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
-    }
-  },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/tests/setup.js",
     "coverageDirectory": "<rootDir>/src/tests/coverage",
@@ -74,6 +69,10 @@
       "text-summary",
       "html"
     ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/src/tests/assetsTransformer.js"
+    },
     "testURL": "http://localhost/"
   }
 }

@@ -2,11 +2,18 @@ import React from 'react'
 import Message from './Message'
 import { Container } from './styles'
 
-const MessageList = ({ messages }) => (
+const MessageList = ({ messages, isMineMessage }) => (
   <Container>
-    {messages.map(({ id, message, owner }) => (
-      <Message key={id} message={message} owner={owner} />
-    ))}
+    <tbody>
+      {messages.map(({ id, message, owner }, index) => (
+        <Message
+          key={id}
+          message={message}
+          owner={owner}
+          isMineMessage={owner && isMineMessage(messages, index)}
+        />
+      ))}
+    </tbody>
   </Container>
 )
 

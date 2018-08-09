@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.ul`
+export const Container = styled.table`
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+  width: 100%;
 `

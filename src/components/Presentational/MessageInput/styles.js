@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-top: 40px;
+  margin: 40px 0;
 
   form {
     display: flex;
@@ -10,17 +10,22 @@ export const Container = styled.div`
 
 export const Input = styled.input`
   padding: 15px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  -ms-flex: 1;
+  border-radius: 10px;
   flex: 1;
   border: 2px solid #dfdfdf;
+  height: 75px;
+  color: #444444;
 `
 
 export const Button = styled.button`
-  background-color: #5420d8;
+  width: 32px;
+  height: 26px;
+  background-color: #6895f5;
   border: none;
   color: #fff;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
 `

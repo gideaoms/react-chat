@@ -12,7 +12,7 @@ const MessageInput = ({ handleSubmit, handleChange, messageText }) => (
         onChange={handleChange}
       />
       <Button type='submit'>
-        <IoMdSend size='2em' />
+        <IoMdSend />
       </Button>
     </form>
   </Container>

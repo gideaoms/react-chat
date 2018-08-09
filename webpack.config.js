@@ -1,20 +1,22 @@
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 module.exports = {
-  entry: [
-    './src/index.js',
-    './src/assets/index.js'
-  ],
+  entry: ['./src/index.js', './src/assets/index.js'],
   output: {
     filename: '[hash].js',
-    path: `${__dirname}/public`,
+    path: path.join(__dirname, 'public'),
     publicPath: '/'
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'App',
-      template: './public/index.html'
+      template: path.join(__dirname, 'public/index.html')
+    }),
+    new LiveReloadPlugin({
+      appendScriptTag: true
     }),
     new MiniCssExtractPlugin({
       filename: '[hash].css'
@@ -33,17 +35,12 @@ module.exports = {
       },
       {
         test: /\.s?[ac]ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
   },
   devServer: {
-    contentBase: `${__dirname}/public`,
-    port: 8080,
-    publicPath: '/'
+    contentBase: path.join(__dirname, 'public'),
+    port: 8080
   }
 }

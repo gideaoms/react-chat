@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 60%;
+  width: 65%;
   display: flex;
   align-self: center;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 13px 20px;
   background-color: #00a866;
+  border: 2px solid #00965b;
   border-radius: 15px;
+  margin-top: 25px;
+  min-height: 48px;
 `
 
 export const Span = styled.span`
@@ -17,12 +20,10 @@ export const Span = styled.span`
   align-items: center;
 
   > :first-child {
-    margin-right: 5px;
+    margin-right: 6px;
   }
 `
 
 export const Count = styled.span`
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-left: 5px;
+  margin-right: 6px;
 `

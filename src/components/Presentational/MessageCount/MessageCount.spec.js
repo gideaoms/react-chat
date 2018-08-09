@@ -10,8 +10,7 @@ describe('MessageCount Component - Presentational', () => {
       wrapper
         .children()
         .first()
-        .children()
-        .last()
+        .childAt(1)
         .dive()
         .text()
     ).toEqual('2')
@@ -19,8 +18,7 @@ describe('MessageCount Component - Presentational', () => {
       wrapper
         .children()
         .last()
-        .children()
-        .last()
+        .childAt(1)
         .dive()
         .text()
     ).toEqual('5')

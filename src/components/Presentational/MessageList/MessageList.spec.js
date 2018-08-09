@@ -9,7 +9,10 @@ describe('MessageList Component - Presentational', () => {
       { id: 2, message: 'Message 02', owner: false },
       { id: 3, message: 'Message 03', owner: true }
     ]
-    const wrapper = shallow(<MessageList messages={messages} />)
+    const isMineMessage = jest.fn()
+    const wrapper = shallow(
+      <MessageList messages={messages} isMineMessage={isMineMessage} />
+    )
 
     expect(wrapper.find('Message').length).toBe(3)
   })
