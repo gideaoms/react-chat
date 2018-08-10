@@ -6,6 +6,7 @@ import { Container } from './styles'
 
 const Chat = () => (
   <Container>
+    <h1>Wolcome to the chat</h1>
     <MessageCount />
     <MessageList />
     <MessageInput />
